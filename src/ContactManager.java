@@ -13,6 +13,7 @@ public class ContactManager {
             switch (n) {
                 case 1:
                     Contact contact = addContact();
+
                     addToArray(contact);
 
                     break;
@@ -174,5 +175,13 @@ public class ContactManager {
         System.out.println("Choose an option:");
         Scanner s = new Scanner(System.in);
         return s.nextInt();
+    }
+    private boolean isPhoneNumberUnique(String phoneNumber) {
+        for (Contact contact : contactArr) {
+            if (contact.equals(phoneNumber)) {
+                return false;
+            }
+        }
+        return true;
     }
 }
