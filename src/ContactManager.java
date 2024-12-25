@@ -24,6 +24,7 @@ public class ContactManager {
                     String query = getQuery();
                     search(query);
                     break;
+
                 case 4:
                     String phone = deleteContact();
                     deleteCotactFromArray(phone);
